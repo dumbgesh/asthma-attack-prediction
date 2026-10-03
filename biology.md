@@ -1,15 +1,30 @@
 # Biology & Science Notes — Asthma Attack Prediction
 
-## 1. Project Context
+## 1. Asthma
+Asthma involves symptoms such as shortness of breath and wheezing, which can vary over time.
 
-This project uses the AAMOS-00 dataset to study patterns associated with increased asthma treatment needs.
+## 2. Symptoms in AAMOS-00
+The weekly questionnaire records:
+- Night symptoms
+- Day symptoms
+- Activity limitation
+- Shortness of breath
+- Wheezing
 
-The goal is to understand the underlying biology while building the data-mining model, rather than treating the dataset as a collection of unexplained variables.
+Some variables count the number of affected days in the previous week, while others use symptom-frequency categories.
 
-Scientific explanations will be added throughout the project as relevant concepts are introduced.
+## 3. Asthma Treatment
+The dataset records:
+- Preventer inhaler use
+- Relief inhaler use
+- Systemic corticosteroid use
 
-## 2. Systemic Corticosteroids and Asthma
+Our target is based on **systemic corticosteroid use being more than usual**.
 
-Systemic corticosteroids are medications used to reduce inflammation during more severe asthma worsening. In this dataset, increased systemic corticosteroid use is therefore used as a measurable indicator of increased treatment needs.
+## 4. Peak Flow
+Peak flow measures how strongly a person can blow air out of their lungs. AAMOS-00 records peak-flow measurements for participants.
 
-The model target is a dataset-defined treatment indicator, not a clinical diagnosis of an asthma attack.
+## 5. What We're Studying
+We are using these observations to look for patterns associated with increased asthma treatment needs.
+
+**Important:** Our model predicts a dataset-defined treatment outcome; it does not diagnose an asthma attack.

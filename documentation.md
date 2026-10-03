@@ -1,36 +1,45 @@
 # Asthma Attack Prediction
 
 ## Step 1 — Project Setup
-
-Created a project environment to study asthma-related data from the AAMOS-00 dataset and build a classification model.
+Created the project environment for studying asthma-related patterns in AAMOS-00 and building a classification model.
 
 ## Step 2 — Dataset Loading
-
-Loaded four AAMOS-00 datasets:
-
-- Daily questionnaire — 1,583 rows, 8 columns
-- Weekly questionnaire — 324 rows, 12 columns
-- Peak flow — 1,516 rows, 6 columns
-- Patient information — 22 rows, 28 columns
+Loaded four datasets:
+- Daily questionnaire: 1,583 × 8
+- Weekly questionnaire: 324 × 12
+- Peak flow: 1,516 × 6
+- Patient information: 22 × 28
 
 ## Step 3 — Dataset Structure
+Inspected columns and identified `user_key` as the common participant identifier. `weekly_oral` was identified as the potential target.
 
-Inspected the columns of each dataset to understand the available variables and how the datasets can be connected through `user_key`.
+## Step 4 — Weekly Variables
+Inspected weekly symptom variables, their distributions, and missing values.
 
-The weekly questionnaire contains the treatment-related variable `weekly_oral`, which will be investigated as the prediction target.
+## Step 5 — Data Dictionary
+Verified variable definitions and coding using the AAMOS-00 data dictionary. Symptom-day variables use 0–7 days, while shortness of breath and wheezing use ordinal 1–5 scales.
 
-## Step 4 — Weekly Symptom Variables
+## Step 6 — Data Quality
+Found one invalid `weekly_night_symp` value (`1.2`) for participant 113. It will be treated as missing during preprocessing.
 
-Inspected five weekly symptom-related variables.
+## Step 7 — Additional Weekly Variables
+Verified relief-inhaler and healthcare-visit variables. Healthcare-visit values represent days since an event rather than event counts.
 
-`weekly_night_symp`, `weekly_day_symp`, and `weekly_limit_activity` use values from 1–7 and contain missing observations. `weekly_short_breath` and `weekly_wheeze` use values from 1–5 and have complete observations.
+## Step 8 — Missing Values
+Weekly data contains substantial missingness in some symptom variables. Missing observations will not automatically be treated as zero.
 
-The variables use different scales and have different levels of missingness, so their coding and missing-value handling need to be examined before preprocessing.
+## Step 9 — Target Creation
+Created a binary target:
+- `0` = no increased systemic corticosteroid use
+- `1` = systemic corticosteroid use more than usual
 
-## Step 5 — Weekly Symptom Value Distribution
+Current target distribution: 280 negative, 43 positive, 1 unknown.
 
-Examined the unique values and missingness of the weekly symptom variables.
+## Step 10 — Patient Data
+Checked participant-level data and missing values. Main characteristics are largely complete.
 
-`weekly_short_breath` and `weekly_wheeze` have complete observations, while `weekly_night_symp`, `weekly_day_symp`, and `weekly_limit_activity` contain missing values.
+## Step 11 — Patient Characteristics
+Inspected sex, age, BMI, smoking history, asthma severity, age at diagnosis, and number of inhalers. These will be merged with weekly observations using `user_key`.
 
-The variables use different coding schemes, and some values are not simple integer sequences. Therefore, the variable definitions need to be verified before feature engineering or missing-value treatment.
+## Step 12 — Peak Flow
+Inspected 1,516 peak-flow observations from the 22 participants. `pef_max` ranges from 120 to 639.
