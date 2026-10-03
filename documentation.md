@@ -26,3 +26,11 @@ Inspected five weekly symptom-related variables.
 `weekly_night_symp`, `weekly_day_symp`, and `weekly_limit_activity` use values from 1–7 and contain missing observations. `weekly_short_breath` and `weekly_wheeze` use values from 1–5 and have complete observations.
 
 The variables use different scales and have different levels of missingness, so their coding and missing-value handling need to be examined before preprocessing.
+
+## Step 5 — Weekly Symptom Value Distribution
+
+Examined the unique values and missingness of the weekly symptom variables.
+
+`weekly_short_breath` and `weekly_wheeze` have complete observations, while `weekly_night_symp`, `weekly_day_symp`, and `weekly_limit_activity` contain missing values.
+
+The variables use different coding schemes, and some values are not simple integer sequences. Therefore, the variable definitions need to be verified before feature engineering or missing-value treatment.
