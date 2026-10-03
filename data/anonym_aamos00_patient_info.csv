@@ -1,0 +1,23 @@
+"user_key","sex","age_range","bmi_range","age_diagnosed_range","max_pef_expected","smoker","pack_years","race","severity","pef_best","n_inhalers","region","nation","phase2_start","daily_start_date","weekly_start_date","miband_start_date","position_start_date","pef_start_date","inhaler_start_date","daily_end_date","weekly_end_date","miband_end_date","position_end_date","pef_end_date","inhaler_end_date","phase2_end"
+113,"female","30-39yo","Obesity","7-11yo",485,"Never (<100 cigarettes in lifetime)",0,"White","Severe",560,10,"South East","England",0,0,1,0,1,1,0,183,183,183,183,40,177,183
+190,"male","50+yo","Pre-obesity","19+yo",575,"Previous",18.75,"White","Severe",NA,2,"East","England",0,0,0,1,1,6,1,183,182,148,183,183,19,183
+217,"female","30-39yo","Obesity","19+yo",495,"Previous",6.3,"White","Moderate",450,1,"East","England",0,0,0,0,0,0,1,1,0,1,1,0,1,1
+278,"female","18-29yo","Pre-obesity","12-18yo",495,"Previous",1.2,"White","Moderate",550,2,"Yorkshire and the Humber","England",0,2,1,10,0,NA,-20,15,15,15,13,NA,106,106
+294,"female","50+yo","Obesity","0-6yo",455,"Never (<100 cigarettes in lifetime)",0,"White","Moderate",450,1,"Wales","Wales",0,0,0,-1,0,0,-5,183,182,183,183,183,184,184
+328,"female","30-39yo","Normal","7-11yo",505,"Never (<100 cigarettes in lifetime)",0,"White","Moderate",450,1,"South West","England",0,0,0,6,0,0,0,30,14,12,30,30,94,94
+343,"female","40-49yo","Normal","12-18yo",475,"Never (<100 cigarettes in lifetime)",0,"White","Moderate",470,1,"West Midlands","England",0,0,0,0,0,1,0,183,182,183,183,183,184,184
+398,"female","30-39yo","Normal","19+yo",500,"Never (<100 cigarettes in lifetime)",0,"White","Moderate",480,2,"Scotland","Scotland",0,0,0,0,0,NA,0,36,36,36,36,NA,48,48
+447,"female","50+yo","Obesity","19+yo",465,"Previous",15,"White","Moderate",325,2,"South West","England",0,0,0,0,0,0,-1,126,126,91,126,90,172,172
+454,"female","40-49yo","Obesity","19+yo",455,"Never (<100 cigarettes in lifetime)",0,"White","Moderate",420,2,"Scotland","Scotland",0,0,0,0,0,NA,0,10,8,8,10,NA,38,38
+473,"female","40-49yo","Pre-obesity",NA,470,"Never (<100 cigarettes in lifetime)",0,"White","Moderate",450,1,"South East","England",0,0,3,0,0,-2,-4,183,183,61,183,178,184,184
+514,"female","40-49yo","Pre-obesity","7-11yo",475,"Never (<100 cigarettes in lifetime)",0,"White","Severe",525,1,"South East","England",0,1,1,1,1,1,1,175,175,183,183,183,184,184
+562,"female","30-39yo","Obesity","0-6yo",495,"Never (<100 cigarettes in lifetime)",0,"White","Severe",650,2,"North West","England",0,0,2,NA,0,NA,NA,41,35,NA,41,NA,NA,41
+625,"male","18-29yo","Obesity","0-6yo",590,"Never (<100 cigarettes in lifetime)",0,"Mixed/multiple ethnic groups","Mild",500,NA,"West Midlands","England",0,0,0,0,0,0,-1,139,107,50,139,84,21,139
+701,"male","40-49yo","Pre-obesity","0-6yo",640,"Previous",2,"White","Moderate",360,1,"South East","England",0,0,0,0,0,0,0,163,163,111,163,23,30,163
+702,"male","30-39yo","Normal","0-6yo",640,"Never (<100 cigarettes in lifetime)",0,"White","Mild",580,1,"East","England",0,0,0,0,0,0,4,182,182,182,182,138,184,184
+748,"male","50+yo","Pre-obesity","0-6yo",615,"Never (<100 cigarettes in lifetime)",0,"White","Very severe",440,1,"Yorkshire and the Humber","England",0,0,0,1,0,NA,NA,5,0,2,5,NA,NA,5
+764,"female","30-39yo","Obesity","0-6yo",485,"Never (<100 cigarettes in lifetime)",0,"White","Moderate",430,1,"Scotland","Scotland",0,0,0,4,0,34,NA,67,64,54,67,50,NA,67
+808,"female","40-49yo","Normal","7-11yo",490,"Never (<100 cigarettes in lifetime)",0,"White","Severe",480,1,"Northern Ireland","Northern Ireland",0,0,0,0,3,1,NA,172,172,154,172,58,NA,172
+867,"female","30-39yo","Normal","7-11yo",490,"Never (<100 cigarettes in lifetime)",0,"White","Severe",450,2,"Scotland","Scotland",0,0,0,NA,0,36,NA,136,136,NA,136,85,NA,136
+917,"female","18-29yo","Obesity","0-6yo",470,"Never (<100 cigarettes in lifetime)",0,"White","Severe",380,1,"West Midlands","England",0,1,1,1,1,NA,0,44,30,61,47,NA,61,61
+939,"female","30-39yo","Normal","0-6yo",495,"Never (<100 cigarettes in lifetime)",0,"White","Moderate",360,2,"South East","England",0,1,1,1,1,1,0,182,182,178,182,182,184,184

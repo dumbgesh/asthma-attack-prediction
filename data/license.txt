@@ -1,0 +1,95 @@
+Depositor Agreement: Edinburgh DataShare
+
+Ownership
+
+By agreeing to the terms outlined here, I assert that I am either the sole
+rights-holder or am permitted by all rights-holder(s) to deposit this dataset in
+such a repository thus, subject to any embargo period that I have specified in
+the metadata record for this item, making it openly available to all comers to
+download. By depositing this dataset in Edinburgh DataShare, I do not transfer
+ownership. I retain, inter alia, the right to deposit the item elsewhere in its
+present or future version(s). I retain all my moral rights in this work including
+the right to be acknowledged.
+
+I warrant: that the content of my deposited dataset does not breach any law; it
+is original and does not infringe the copyright of any other person; if it
+contains material that is copyright of a third-party, I have secured permission
+from the rights-holder or her/his representative to include such material in my
+dataset; any third-party materials for which I have not secured the necessary
+permissions have been deleted from my dataset before deposit; if the dataset has
+been sponsored or subsidised by any institution or organisation other than my
+employer, I have fulfilled all obligations to that institution or organisation
+regarding publication.
+
+I do not guarantee that the dataset is accurate. I indemnify the University of
+Edinburgh (hereafter referred to as 'the Host') against any legal action arising
+from the content of my dataset.
+
+Permissions granted to the repository
+
+I assert that the Host:
+
+1. May distribute copies of my dataset world-wide, in electronic format via any
+medium for the lifetime of Edinburgh DataShare (and subsequently, for the
+lifetime of any repository to which Edinburgh DataShare migrates my dataset).
+Furthermore, I assert that the Host (and the host of any repository to which it
+migrates my dataset) may translate, copy or re-arrange my dataset to ensure its
+future preservation and accessibility, and may keep a copy of my dataset for
+security, and back-up unless I notify the Host that specific restrictions apply.
+No charge will be levied for distribution.
+
+2. May at any time, migrate my dataset to another repository (subject-based,
+institutional or other) on condition that all metadata are migrated with the
+dataset, that no charge will be levied by the destination repository.
+
+3. May incorporate metadata or documentation into public access catalogues for my
+dataset.
+
+4. May retain the right to remove my dataset from the repository for professional
+or administrative reasons, or if it is found to violate the legal rights of any
+person.
+
+5. Shall not be under any obligation to take legal action on my behalf or on
+behalf of any other rights holder in the event of breach of intellectual property
+rights or any other right in the material deposited.
+
+6. Shall not be under any obligation to reproduce, transmit, broadcast or display
+my dataset in the same format or software as that in which it was originally
+created.
+
+Removal of the dataset from Edinburgh DataShare
+
+If my deposited dataset is subject to complaint, the Host reserves the right to
+invoke Edinburgh DataShare's Takedown policy. The Host reserves the right to
+revise that policy.
+
+Should a dataset be removed from Edinburgh DataShare by either the repository or
+the depositor, the Host reserves the right to retain its metadata record in the
+repository as trace of the dataset. This informs users of Edinburgh DataShare
+that the removal of this dataset was deliberate.
+
+Disclaimer
+
+The Host accepts no responsibility for mistakes, omissions, or legal
+infringements within the deposited object. While every care will be taken to
+preserve the dataset, the Host is not liable for loss or damage to the dataset or
+any other data while it is stored in Edinburgh DataShare (or any repository to
+which the dataset is subsequently migrated, as indicated above).
+
+Applicable law
+
+This agreement shall be governed by the law of Scotland and shall take effect on
+the date of deposit.
+
+Definitions and terms
+
+Dataset means a set of files containing both research data, and documentation.
+
+Research data means that which is collected, observed, or created in a digital
+form, for purposes of analysing to produce original research results.
+
+Documentation means any digital files such as a codebook, technical report,
+methodology, which explain the research data's production or use.
+
+Edinburgh DataShare is the name for a repository hosted at the University of
+Edinburgh that stores datasets.
