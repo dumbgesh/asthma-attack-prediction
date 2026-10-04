@@ -76,3 +76,33 @@ Filled missing values in the three weekly symptom variables using their respecti
 
 ## Step 21 — Train-Test Split
 Split the dataset into 80% training and 20% testing data using stratified sampling to preserve the target-class distribution.
+
+## Step 22 — Naive Bayes Model
+Trained a Gaussian Naive Bayes classifier using the training dataset to predict increased systemic corticosteroid use.
+
+## Step 23 — Initial Model Evaluation
+Evaluated the Naive Bayes predictions using accuracy and a confusion matrix to compare predicted and actual outcomes.
+
+## Step 24 — Classification Metrics
+Calculated precision, recall, and F1-score to evaluate the model beyond accuracy, especially because the target classes are imbalanced.
+
+## Step 25 — Baseline Comparison
+Calculated the majority-class baseline accuracy to determine whether the Naive Bayes model performs better than a simple classifier that always predicts the majority class.
+
+## Step 26 — Naive Bayes Tuning
+Tested different `var_smoothing` values to determine whether simple parameter tuning can improve the Naive Bayes model without changing the required algorithm.
+
+## Step 27 — Extended Naive Bayes Tuning
+Tested larger `var_smoothing` values to determine whether stronger smoothing could further improve model accuracy.
+
+## Step 28 — Tuned Model Evaluation
+Evaluated the best-performing tuned Naive Bayes model (`var_smoothing=0.1`) using accuracy, confusion matrix, precision, recall, and F1-score. The model achieved 81.54% accuracy, with 56% recall for the positive class.
+
+## Step 29 — Feature Comparison
+Compared average feature values between the two target groups to identify variables showing stronger differences between observations with and without increased systemic corticosteroid use.
+
+## Step 39 — Feature Selection Test
+Tested a smaller feature set based on the strongest differences between target groups. The reduced feature set performed worse than the full feature set, so the full set was retained.
+
+## Step 40 — Participant Observation Structure
+Checked the number of weekly observations contributed by each participant before evaluating whether a participant-level train-test split is more appropriate.
