@@ -44,7 +44,29 @@ Inspected sex, age, BMI, smoking history, asthma severity, age at diagnosis, and
 ## Step 12 — Peak Flow
 Inspected 1,516 peak-flow observations from the 22 participants. `pef_max` ranges from 120 to 639.
 
-## Step 13 — Peak Flow Exploration
 Examined peak-flow measurements by participant. The number of readings varies considerably between participants, and average peak-flow values also differ substantially.
 
 Because peak flow is participant-dependent, raw `pef_max` values will not be used directly without considering each participant's expected value.
+
+## Step 13 — Peak Flow Timing
+Compared weekly and peak-flow dates. Weekly observations occur approximately weekly, while peak-flow measurements are more frequent and irregular.
+
+Therefore, peak-flow data cannot be directly merged by date. A previous-7-day summary will be considered so that only measurements occurring before the weekly observation are used.
+
+## Step 14 — Basic Modeling Dataset
+Combined weekly questionnaire observations with participant-level information using `user_key`. This creates the initial dataset for model preparation.
+
+## Step 15 — Healthcare Visit Variables
+Inspected doctor, hospital, and emergency-room variables before modeling because their values represent time since an event and may require preprocessing.
+
+## Step 16 — Feature Selection
+Removed healthcare-visit variables because their event-based coding requires additional interpretation. The model will focus on weekly symptoms, treatment use, and participant characteristics.
+
+## Step 17 — Missing Values in Modeling Data
+Checked missing values across the selected features before preprocessing and model training.
+
+## Step 18 — Missingness Impact
+Checked how many observations have complete values for the main weekly symptom variables before choosing an imputation strategy.
+
+## Step 19 — Unknown Target
+Removed the single observation with a missing target because the outcome cannot be safely imputed.
