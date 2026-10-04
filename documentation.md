@@ -70,3 +70,9 @@ Checked how many observations have complete values for the main weekly symptom v
 
 ## Step 19 — Unknown Target
 Removed the single observation with a missing target because the outcome cannot be safely imputed.
+
+## Step 20 — Median Imputation
+Filled missing values in the three weekly symptom variables using their respective median values, avoiding loss of a large portion of the dataset.
+
+## Step 21 — Train-Test Split
+Split the dataset into 80% training and 20% testing data using stratified sampling to preserve the target-class distribution.
