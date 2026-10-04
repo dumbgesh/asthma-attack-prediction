@@ -43,3 +43,8 @@ Inspected sex, age, BMI, smoking history, asthma severity, age at diagnosis, and
 
 ## Step 12 — Peak Flow
 Inspected 1,516 peak-flow observations from the 22 participants. `pef_max` ranges from 120 to 639.
+
+## Step 13 — Peak Flow Exploration
+Examined peak-flow measurements by participant. The number of readings varies considerably between participants, and average peak-flow values also differ substantially.
+
+Because peak flow is participant-dependent, raw `pef_max` values will not be used directly without considering each participant's expected value.
