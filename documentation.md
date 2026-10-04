@@ -65,3 +65,56 @@ Checked the dataset for completely duplicated rows. No duplicate records were fo
 
 ## Step 22 — Feature and Target Identification
 Separated the dataset into the target variable, patient identifier, observation-time variable, and potential predictors. `Asthma exacerbation` was identified as the target, while `id` was excluded as a patient identifier rather than a clinical predictor. The observation variable `t` was retained for further consideration because it represents the ordinal measurement point in the longitudinal dataset. This produced 23 candidate predictor variables and 195 target observations.
+
+## Step 23 — Target Labels
+Inspected the unique values of the target variable. The target is binary, with two classes: `No Exacerbation` and `Exacerbation`. The original categorical labels were retained at this stage for interpretability and will be encoded during model preprocessing.
+
+## Step 24 — Observation Time and Feature Selection
+Examined asthma exacerbation rates across the observation points represented by `t`. The observed rates were 12.3% at `t = 1`, 15.4% at `t = 2`, 20.8% at `t = 3`, and 0% at `t = 4`. Because `t` represents the longitudinal observation point rather than a direct patient characteristic, and the final observation contains only 12 observations with no exacerbation cases, it was excluded from the final predictive feature set. The variable was retained in the original dataset for longitudinal analysis and documentation.
+
+The resulting feature matrix contains 22 candidate predictors and 195 observations.
+
+## Step 25 — Predictor Data Types
+Inspected the data types of the selected predictors. The feature set contains 21 categorical variables and one numerical count variable, `Ath`. The categorical variables will require categorical encoding during preprocessing, while `Ath` can be handled as a numerical feature.
+
+## Step 26 — Ath Distribution
+Inspected the frequency distribution of the numerical `Ath` variable. The variable is concentrated at zero, with 103 of 195 observations having a value of 0, while higher values occur less frequently. No missing or unusual values were identified. The original count representation was retained rather than applying arbitrary categories.
+
+## Step 27 — Preprocessing Strategy
+Reviewed the source paper's variable definitions and encoding scheme. The dataset already provides most clinical predictors as categorical/discretized variables, while `Ath` is represented as a numerical count. The supplied category definitions were retained rather than recreating categories from the underlying measurements. The planned preprocessing therefore keeps categorical predictors as categorical variables, retains `Ath` as a numerical count, and encodes the binary target during model preparation.
+
+## Step 28 — Categorical Feature Encoding
+Converted the 22 selected predictor variables into numerical category codes using `OrdinalEncoder`. This produced an encoded feature matrix with 195 observations and 22 predictors. Unknown categories were configured to receive a dedicated encoded value during later preprocessing. The encoding is used as preparation for the categorical Naive Bayes model.
+
+## Step 29 — Encoded Feature Verification
+Inspected the encoded feature matrix after categorical encoding. All 22 predictors were successfully converted into numerical category codes, while the discrete values of `Ath` were preserved. The resulting matrix contains 195 observations and 22 encoded predictors and is ready for model preparation.
+
+## Step 30 — Target Encoding
+Encoded the binary target variable using `LabelEncoder`. The classes were mapped to numerical labels as `Exacerbation = 0` and `No Exacerbation = 1`. The original class labels were retained through the fitted label encoder for later interpretation of model predictions.
+
+## Step 31 — Patient-Level Train/Test Split
+Created a patient-level train/test split to prevent observations from the same patient appearing in both sets. Of the 65 unique patients, 52 patients were assigned to training and 13 patients to testing using an 80/20 split with a fixed random state for reproducibility.
+
+## Step 32 — Patient Separation Verification
+Verified that there is no overlap between the patient identifiers assigned to the training and testing sets. The intersection contained zero patients, ensuring that observations from the same patient cannot appear in both datasets.
+
+## Step 33 — Create Training and Testing Sets
+Created the training and testing feature matrices and target vectors using the patient-level split. The training set contains 157 observations from 52 patients, while the testing set contains 38 observations from 13 patients. Both sets contain the same 22 candidate predictors.
+
+## Step 34 — Training-Only Feature Encoding
+Fitted the categorical encoder using only the training data and then applied the fitted encoder to the testing data. This prevents information from the testing set from influencing the preprocessing stage. The resulting encoded matrices contain 157 training observations and 38 testing observations, each with 22 predictors.
+
+## Step 35 — Training and Testing Target Encoding
+Encoded the target variable using a single `LabelEncoder` fitted on the training labels and applied to the testing labels. Both datasets contain the two target classes, `Exacerbation` and `No Exacerbation`, with consistent numerical encoding.
+
+## Step 36 — Handling Unseen Test Categories
+Checked the encoded testing data for categories that were not present in the training data. Some unseen categories were detected and represented by `-1`; these were replaced with a new valid category index for each feature so that the testing data could be processed by `CategoricalNB` without removing observations.
+
+## Step 37 — Naive Bayes Model Training
+Trained a Categorical Naive Bayes classifier using the encoded training data. The model was configured with the observed category counts for each predictor, including the additional category reserved for unseen test values.
+
+## Step 38 — Model Predictions
+Generated predictions for the 38 observations in the patient-level test set using the trained Categorical Naive Bayes model. The model predicted both target classes, `Exacerbation` and `No Exacerbation`, allowing both classes to be evaluated separately.
+
+## Step 39 — Model Evaluation
+Evaluated the Categorical Naive Bayes model on the 38-observation patient-level test set. The model achieved 76.3% accuracy. It correctly identified 2 of 7 exacerbation cases and 27 of 31 non-exacerbation cases. The recall for the `Exacerbation` class was 29%, while recall for `No Exacerbation` was 87%, indicating that the model performs substantially better at identifying non-exacerbation observations than exacerbation cases.
