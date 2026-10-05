@@ -118,3 +118,27 @@ Generated predictions for the 38 observations in the patient-level test set usin
 
 ## Step 39 — Model Evaluation
 Evaluated the Categorical Naive Bayes model on the 38-observation patient-level test set. The model achieved 76.3% accuracy. It correctly identified 2 of 7 exacerbation cases and 27 of 31 non-exacerbation cases. The recall for the `Exacerbation` class was 29%, while recall for `No Exacerbation` was 87%, indicating that the model performs substantially better at identifying non-exacerbation observations than exacerbation cases.
+
+## Step 40 — Majority-Class Baseline
+Created a majority-class baseline that predicts `No Exacerbation` for every test observation. The baseline achieved 81.6% accuracy, higher than the Naive Bayes model's 76.3% accuracy, but detected none of the seven exacerbation cases. This shows that accuracy alone is misleading for this imbalanced prediction problem, while the Naive Bayes model provides some ability to identify exacerbation cases.
+
+## Step 41 — Model vs Baseline Comparison
+Compared the Categorical Naive Bayes model with a majority-class baseline. Naive Bayes achieved 76.3% accuracy compared with 81.6% for the baseline, but achieved 28.6% recall for exacerbation compared with 0% for the baseline. This demonstrates that the baseline's higher accuracy comes from always predicting the majority class, while Naive Bayes provides some ability to identify exacerbation cases.
+
+## Step 43 — Balanced Prior Experiment
+Tested a second Categorical Naive Bayes model using equal class priors of 0.5 for both exacerbation and non-exacerbation. The resulting predictions and evaluation metrics were identical to the original model, with 76.3% accuracy and 28.6% exacerbation recall. Therefore, changing the class prior alone did not improve minority-class detection.
+
+## Step 44 — Predicted Risk Probabilities
+Generated class probabilities for the test observations using the trained Naive Bayes model. The probabilities represent the model's estimated likelihood for each target class, with the first probability column corresponding to `Exacerbation` and the second to `No Exacerbation`. The model produced both low- and high-risk predictions, providing a probability-based view of predicted exacerbation risk in addition to binary classifications.
+
+## Step 45 — Exacerbation Risk Range
+Examined the predicted probability of asthma exacerbation for the test observations. The estimated probabilities ranged from approximately 0.02% to 99.997%. These values represent the model's estimated probabilities rather than clinically validated risk percentages.
+
+## Step 46 — Prediction Results Table
+Created a prediction results table for the test observations containing patient ID, observation time, actual outcome, predicted outcome, and estimated exacerbation probability. This table provides a consolidated model-output dataset that can be used for further analysis and visualization.
+
+## Step 47 — Export Model Results
+Exported the test-set prediction results to `data/asthma_prediction_results.csv`. The file contains 38 test observations with patient ID, observation time, actual outcome, predicted outcome, and estimated exacerbation probability, providing the dataset for the BI dashboard stage.
+
+## Step 48 — Final Model Summary
+Summarized the final performance of the Categorical Naive Bayes model on 38 unseen test observations. The model achieved 76.3% accuracy, compared with 81.6% for the majority-class baseline. For the `Exacerbation` class, precision was 33.3%, recall was 28.6%, and F1-score was 30.8%. The model therefore showed limited ability to detect exacerbation cases and did not outperform the baseline in overall accuracy.
