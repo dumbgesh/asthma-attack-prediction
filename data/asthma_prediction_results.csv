@@ -1,0 +1,39 @@
+id,t,Actual,Predicted,Exacerbation Risk
+1,1,No Exacerbation,No Exacerbation,0.051713907195374983
+1,2,Exacerbation,No Exacerbation,0.0017048135207233567
+6,1,No Exacerbation,No Exacerbation,0.0002994830328417701
+6,2,No Exacerbation,No Exacerbation,0.0002994830328417701
+6,3,No Exacerbation,No Exacerbation,0.0002994830328417701
+6,4,No Exacerbation,No Exacerbation,0.0002994830328417701
+10,1,No Exacerbation,Exacerbation,0.9995042263222672
+10,2,No Exacerbation,No Exacerbation,0.00021538507177538458
+13,1,No Exacerbation,No Exacerbation,0.012816799684089124
+13,2,No Exacerbation,No Exacerbation,0.048704799593258435
+13,3,No Exacerbation,No Exacerbation,0.012816799684089124
+17,1,No Exacerbation,Exacerbation,0.9792706755355948
+17,2,No Exacerbation,No Exacerbation,0.009968053383982704
+17,3,Exacerbation,No Exacerbation,0.009968053383982704
+31,1,No Exacerbation,No Exacerbation,0.1322329338554184
+31,2,No Exacerbation,Exacerbation,0.7855931129041024
+31,3,No Exacerbation,No Exacerbation,0.0011008815847069935
+34,1,No Exacerbation,No Exacerbation,0.0006769939443373625
+34,2,Exacerbation,No Exacerbation,0.023202058245457405
+34,3,No Exacerbation,No Exacerbation,0.0006769939443373625
+42,1,No Exacerbation,No Exacerbation,0.002773172443420092
+42,2,No Exacerbation,No Exacerbation,0.002773172443420092
+46,1,No Exacerbation,No Exacerbation,0.0008260027211035436
+46,2,No Exacerbation,No Exacerbation,0.0008260027211035436
+54,1,No Exacerbation,Exacerbation,0.9381626129228702
+54,2,No Exacerbation,No Exacerbation,0.06577121039236199
+54,3,No Exacerbation,No Exacerbation,0.07149641085284886
+54,4,No Exacerbation,No Exacerbation,0.0021913162250326358
+61,1,No Exacerbation,No Exacerbation,0.00046941630644035004
+61,2,No Exacerbation,No Exacerbation,0.0005134014915098961
+61,3,No Exacerbation,No Exacerbation,0.0005134014915098961
+61,4,No Exacerbation,No Exacerbation,0.00046941630644035004
+62,1,No Exacerbation,No Exacerbation,0.0028964903275400695
+62,2,No Exacerbation,No Exacerbation,0.0028964903275400695
+62,3,Exacerbation,No Exacerbation,0.07220488148505605
+65,1,Exacerbation,Exacerbation,0.9997572127503852
+65,2,Exacerbation,No Exacerbation,0.045860133917028444
+65,3,Exacerbation,Exacerbation,0.9999722469177312
