@@ -81,3 +81,5 @@ Asthma exacerbation is multifactorial.
 
 It is influenced by a combination of symptoms, asthma control, lung function, allergies, demographics, and clinical history rather than one single variable.
 
+
+this is it ig
