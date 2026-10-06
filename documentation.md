@@ -142,3 +142,6 @@ Exported the test-set prediction results to `data/asthma_prediction_results.csv`
 
 ## Step 48 — Final Model Summary
 Summarized the final performance of the Categorical Naive Bayes model on 38 unseen test observations. The model achieved 76.3% accuracy, compared with 81.6% for the majority-class baseline. For the `Exacerbation` class, precision was 33.3%, recall was 28.6%, and F1-score was 30.8%. The model therefore showed limited ability to detect exacerbation cases and did not outperform the baseline in overall accuracy.
+
+## From Step 49 we'll start with Power BI
+Done with installment, we'll move forward in a while
