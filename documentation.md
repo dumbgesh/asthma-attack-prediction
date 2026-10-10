@@ -145,3 +145,67 @@ Summarized the final performance of the Categorical Naive Bayes model on 38 unse
 
 ## From Step 49 we'll start with Power BI
 Done with installment, we'll move forward in a while
+
+## Step 50
+
+we created a blank canvas and now we have started with the making of dashboard element by element
+
+## Step 51 — Power BI: Test Observations KPI
+Created the first Power BI KPI card using the exported prediction dataset. The `id` field was changed from `Sum` to `Count` so the card correctly displays the 38 test observations used for model evaluation.
+
+## Step 52 — Power BI: KPI Title
+Added the title `Test Observations` to the first KPI card to clearly identify the metric displayed on the dashboard.
+
+## Step 53 — Power BI: Actual Exacerbations Measure
+Created a DAX measure named `Actual Exacerbations` using `COUNTROWS` and `CALCULATE` to count test observations whose actual outcome is `Exacerbation`. This introduces dynamic measures as a core Power BI calculation concept.
+
+## Step 54 — Power BI: Actual Exacerbations KPI
+Created a KPI card displaying the number of actual exacerbation observations in the test set. The DAX measure returned 7 actual exacerbation cases.
+
+## Step 55 — Power BI: Exacerbation Recall Measure
+Created a DAX measure to calculate the proportion of actual exacerbation observations correctly identified by the model. The measure calculates true positives divided by all actual exacerbation observations.
+
+## Step 56 — Power BI: Exacerbation Recall KPI
+Created a KPI card displaying the model's exacerbation recall. The initial value was approximately 0.286, representing 2 correctly detected exacerbations out of 7 actual exacerbation observations.
+
+## Step 57 — Power BI: Format Recall as Percentage
+Formatted the `Exacerbation Recall` measure as a percentage with one decimal place so the dashboard displays the model's recall as 28.6%.
+
+## Step 58 — Power BI: Actual vs Predicted Outcomes
+Created a clustered column chart comparing actual asthma exacerbation outcomes with the model's predicted outcomes. The chart visualizes correctly detected exacerbations, missed exacerbations, false positives, and correctly identified non-exacerbations.
+
+## Step 59 — Power BI: Predicted Risk Visualization
+Created an initial line chart to explore predicted exacerbation probabilities across test observations. Because patients have repeated observations, averaging risk by patient ID could misrepresent individual predictions. The chart was later replaced with a scatter chart.
+
+## Step 60 — Power BI: Prediction Details Table
+Created a detailed table containing patient ID, observation time, actual outcome, predicted outcome, and predicted exacerbation risk. Disabled aggregation for numeric fields so each row represents an individual test observation.
+
+## Step 61 — Power BI: Model Accuracy Measure
+Created a DAX measure to calculate model accuracy by dividing the number of correct predictions by the total number of test observations.
+
+## Step 62 — Power BI: Model Accuracy KPI
+Created a KPI card displaying the model's accuracy as a percentage. The card reports approximately 76.3% accuracy across the 38 test observations.
+
+## Step 63 — Power BI: Predicted Risk Bands
+Created a calculated column that groups predicted exacerbation probabilities into four descriptive bands: Low (0–20%), Moderate (20–50%), High (50–80%), and Very High (80–100%). These bands are exploratory and are not clinically validated risk categories.
+
+## Step 64 — Power BI: Risk Distribution Chart
+Created a column chart showing the number of test observations in each predicted risk band. Most observations fell in the Low band, with fewer in the High and Very High bands.
+
+## Step 65 — Power BI: Dashboard Layout
+Organized the report into a dashboard containing performance KPI cards, actual-versus-predicted outcomes, predicted risk distribution, and prediction details. Added a title and a model limitations note.
+
+## Step 66 — Power BI: Model Limitations
+Added a note explaining that the model achieved approximately 76.3% accuracy and 28.6% exacerbation recall on a small test set. The model did not outperform the majority-class baseline in accuracy, and its predicted probabilities are not clinically validated.
+
+## Step 67 — Power BI: Corrected Risk Visualization
+Replaced the line chart with a scatter chart to show predicted exacerbation probabilities without connecting observations into a potentially misleading trend. Used patient ID on the X-axis, predicted exacerbation risk on the Y-axis, and actual outcome as the legend.
+
+## Step 68 — Power BI: Accuracy Verification
+Verified the DAX formula for `Model Accuracy` and confirmed that the dashboard displayed approximately 76.3% accuracy after checking the measure.
+
+## Step 69 — Power BI: Predicted Risk Scatter Chart
+Finalized the scatter chart showing predicted exacerbation probabilities by patient ID, with actual outcomes distinguished by color. Repeated observations can share the same patient ID, so the prediction details table remains the reference for individual records.
+
+## Step 70 — Power BI: Save Dashboard
+Saved the Power BI report as `asthma_exacerbation_dashboard.pbix` in the project folder. The report contains model performance KPIs, actual-versus-predicted outcomes, predicted risk bands, a risk scatter chart, and a detailed prediction table.
