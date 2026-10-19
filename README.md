@@ -15,8 +15,5 @@ A machine learning project exploring whether patient characteristics, symptoms, 
 
 The model did not outperform a majority-class baseline in accuracy, highlighting the challenge of predicting the less frequent exacerbation cases.
 
-## Tech Stack
-Python · Pandas · scikit-learn · Jupyter Notebook · Power BI
-
 ## Disclaimer
 This is an educational project. The model is not clinically validated and should not be used for medical decisions.
